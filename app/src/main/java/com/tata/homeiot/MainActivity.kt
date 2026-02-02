@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.tata.homeiot.ui.navigation.SmartHomeNavGraph
+import com.tata.homeiot.ui.navigation.HomeIotNavGraph
 import com.tata.homeiot.ui.theme.HomeIoTTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
 //                    )
 //                }
                 val navController = rememberNavController()
-                SmartHomeNavGraph(navController = navController)
+                HomeIotNavGraph(navController = navController)
             }
         }
     }

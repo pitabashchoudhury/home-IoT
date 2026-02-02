@@ -2,19 +2,22 @@ package com.tata.homeiot.ui.navigation
 
 sealed class Route(val route: String) {
 
-    object Login : Route("login")
+    // Root
+    object Splash : Route("splash")
+    object Error : Route("error")
+    object NoInternet : Route("no_internet")
 
+    // Auth
+    object Login : Route("login")
     object Signup : Route("signup")
 
+    // Main
     object Home : Route("home")
 
-    object DeviceDetail : Route("device_detail/{deviceId}") {
-        fun createRoute(deviceId: String): String {
-            return "device_detail/$deviceId"
-        }
+    // Bulb
+    object BulbList : Route("bulb_list")
+    object BulbDetail : Route("bulb_detail/{bulbId}") {
+        fun createRoute(bulbId: String) = "bulb_detail/$bulbId"
     }
-
-    object Cctv : Route("cctv")
-
-    object Profile : Route("profile")
 }
+

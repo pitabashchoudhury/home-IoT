@@ -7,7 +7,7 @@ import androidx.navigation.compose.composable
 import com.tata.homeiot.ui.home.HomeScreen
 
 @Composable
-fun SmartHomeNavGraph(
+fun HomeIotNavGraph(
     navController: NavHostController,
     startDestination: String = Route.Home.route,
 ) {
